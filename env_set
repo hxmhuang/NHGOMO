@@ -1,0 +1,31 @@
+export LIBRARY_PATH=
+export LD_LIBRARY_PATH=
+export MPI_ROOT=
+
+##gcc
+export PATH=/GPFS/cess/wangdong/local/cmake/bin:$PATH
+export PATH=/GPFS/cess/wangdong/local/cmake/bin:$PATH
+export PATH=/usr/sw-cluster/apps/gcc/6.1.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/sw-cluster/apps/gcc/6.1.0/lib64:$LD_LIBRARY_PATH
+export CPLUS_INCLUDE_PATH=/usr/sw-cluster/apps/gcc/6.1.0/lib/gcc/x86_64-pc-linux-gnu/6.1.0/include:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=/usr/sw-cluster/apps/mpc/1.0.3/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/sw-cluster/apps/mpfr/3.1.4/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/sw-cluster/apps/gmp/6.1.1/lib:$LD_LIBRARY_PATH
+
+##add by huangxing for ncdump
+#export LD_LIBRARY_PATH=/home/export/base/nsccwuxi_cess/cess/GPFS/intel-esm-soft/lib:/GPFS/cess/wangdong/local/slurm/lib:$LD_LIBRARY_PATH
+
+
+##parallel_studio_xe_2018
+source /GPFS/cess/wangdong/intel/parallel_studio_xe_2018.1.038/bin/psxevars.sh intel64
+export I_MPI_PMI_LIBRARY=/usr/sw-cluster/slurm-16.05.3/lib/libpmi.so
+
+
+export EXT_PATH=/GPFS/cess/wangdong/cluster/libs-icc
+export LD_LIBRARY_PATH=/GPFS/cess/wangdong/cluster/libs-icc/lib64:$LD_LIBRARY_PATH
+
+#petsc
+export PETSC_DIR=/GPFS/cess/liuc/Libaraies/petsc-3.6.4
+export PETSC_ARCH=linux-intel
+
+##export OPEN_ARRAY=/GPFS/cess/huangxing/openarray_cxx/build

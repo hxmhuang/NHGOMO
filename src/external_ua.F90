@@ -1,0 +1,20 @@
+subroutine external_ua(iext)
+  use openarray
+  use variables
+  use config
+  implicit none
+  integer :: iext
+  if(mod(iext,ispadv)==0) then
+    advua = DXB( ( AXF(AXB(d)*ua)* AXF(ua)-2.0*d* aam2d* DXF(uab))*fsm ) &
+         +DYF((AXB(AYB(d)*va)*AYB(ua)-AYB(AXB(d)) &
+         *AXB(AYB(aam2d))*(DYB(uab)+DXB(vab))) &
+         *(2*AYB( dum )*AYB( dum ) -AYB( dum *dum )) &
+         *(2*AXB( dvm )*AXB( dvm )-AXB(dvm *dvm )))
+  endif
+  uaf=(AXB(h+elb)*uab - 2.0*dte*(adx2d+advua &
+       - AXB(cor*d*AYF(va))       &
+       + grav*AXB(d)*( (1.0-2.0*alpha)*DXB(el) &
+       + alpha*(DXB(elb)+DXB(elf))  )  &
+       + drx2d+(wusurf-wubot)) ) / AXB(h+elf)
+  call bcond2_ua()
+end subroutine

@@ -1,0 +1,46 @@
+&setting
+!***Numerical parmeters *******************************************
+dte=0.0003  !external time step(s)
+isplit=5
+tend=90 !Time of end of calculations (s)
+!******************************************************************
+
+!*** Calculation Grid **********************************************
+im=700
+jm=5 
+kb=90
+!*******************************************************************
+z0b=0.0008 ! roughness parameter (in m)
+cbcmin=0.00025! min. drag coef. bottom log layer
+cbcmax=1.000!max. drag coef
+pi=3.1416
+small=1.e-10
+time0=0.0
+swtch=1000.0
+prtd1=0.0125
+prtd2=1.0
+ispadv=5
+smoth=0.10
+tprni=1.
+grav=9.8
+umol=1.e-6
+mode=3
+iskp=4
+jskp=3
+ntp=2
+nbct=1
+nbcs=1
+tbias=0
+sbias=0
+ramp=1
+alpha=0.225
+corfac=0.25
+vmaxl=1000
+horcon=0.01
+aam_init=2.e-6
+problem ="lock_exchange_flow"
+in_path ="./data/"
+rhoref=1025
+!nohflag=1
+!nread=0
+&end
